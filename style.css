@@ -10,10 +10,19 @@
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-} 
+}
+ /* layout  */
 .Flex {
     display: flex;
     justify-content:space-between;
+}
+.Flex2 {
+    display: flex;
+    align-items: center;
+}
+.Flex3{
+    display: flex;
+    flex-direction: column;
 }
 .Botao{
     text-decoration: none;
@@ -51,7 +60,10 @@ header {
 }
 label{
     font-size: 3em;
-    padding: 15px;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0,0,0,0.5);
 }
 nav ul{
     list-style: none;
@@ -84,6 +96,7 @@ main{
     flex-direction: column;   /*Técnica para centralizar conteúdo*/
     justify-content: center;
     text-align: center;      /*tanto na vertical quanto na horizontal*/
+    background-position: center;
 }
 main h1{
     font-size: 2.5em;
@@ -92,18 +105,81 @@ main h2{
     font-size: 1em;
     margin: 20px 0px 50px 0px;
 }
+/* Sobre */
+#sobre{
+    padding: 50px 0px;
+    background-image:url(img/background.png) ; 
+    background-size: cover;
+    background-position: center;
+}
+#destaqueSobre{
+    display: none;
+}
+#textoSobre{
+    color: #fff;
+    padding:0 10px ;
+}
+#textoSobre h2{
+    margin-bottom: 10px;
+}
+.TopicosSobre{
+    margin-top: 20px;
+}
+.TopicosSobre img{
+    margin-right: 10px;
+}
+#sobre {
+    padding: 50px 0px;
+    background-image:url(img/background.png) ; 
+    background-size: cover;
+    background-position: center;
+}
+
+#destaqueSobre{
+    display: none;
+}
+#textoSobre{
+    color: #fff;
+    padding:0 10px ;
+}
+#textoSobre h2{
+    margin-bottom: 10px;
+}
+
+
+/* One Page */
+#onepage{
+    padding: 50px 10px;
+}
+#onepage h2{
+    margin-bottom: 10px;
+}
+#onepage p{
+    margin-bottom: 25px;
+}
+#video iframe{
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
 
 /* Smartphone Landscape */
 @media (min-width: 576px){
-    }
-    /* Layout */
+    
+    /* Layout */ 
     .Container{
         max-width: 540px;
     }
     /* Destaque */
  main h1, main h2 {
     text-shadow: #000 0.05em 0.05em 0.05em;
- }   
+ } 
+ /* One Page */
+ #video iframe{
+    width: 560px;
+    height: 315px;
+}  
+}
 /* Tablet Portrait  */
 @media  (min-width: 768px ){
      /* Destaque */
@@ -169,4 +245,23 @@ main{
     nav ul li a:hover{
         color:#c00000;
     }
-}
+    /* Sobre */
+    #sobre{
+        background-attachment: fixed;
+    }
+    #destaqueSobre{
+        display: inline; /* Método para chamar a img*/
+    }
+    #destaqueSobre img{
+        border-radius: 50%;
+        margin-right: 50px;
+        }
+        /* One Page */
+    .Flex3{
+        flex-direction: row ;
+        align-items: center;
+    } 
+
+    }
+
+
